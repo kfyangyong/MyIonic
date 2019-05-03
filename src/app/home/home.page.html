@@ -1,0 +1,1076 @@
+<app-header></app-header>
+
+
+ <!-- <ion-content
+  [scrollion-content　事件(Events)]="true"
+  (ionScrollStart)="logScrollStart()"
+  (ionScroll)="logScrolling($event)"
+  (ionScrollEnd)="logScrollEnd()">
+   ion-content> -->
+<ion-content (ionScrollStart)="logScrollStart()" (ionScroll)="logScrolling($event)" (ionScrollEnd)="logScrollEnd($event)">
+  it's home
+
+  <ion-item>
+    <ion-input type="text" readonly color="danger">关于input介绍</ion-input>  
+  </ion-item>
+  <ion-item>
+    <ion-input type="text">账号:</ion-input>  
+  </ion-item>
+  <ion-item>
+    <ion-input type="password">密码:</ion-input>  
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" placeholder="Awesome Input"></ion-input>  
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" value="value值" placeholder="Awesome Input"></ion-input>  
+  </ion-item>
+  <ion-item>
+    <ion-input clearInput type="text" placeholder="clearInput"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="number"  placeholder="number"> </ion-input>  
+  </ion-item>
+  <ion-item>    
+    <ion-input type="text" value='disabled' disabled>我是编辑</ion-input>   
+  </ion-item>
+  <ion-item>   
+    <ion-input type="text" value='readonly' readonly>我是静态值</ion-input>  
+  </ion-item>
+  <ion-item>
+    <ion-label>常见的</ion-label>
+    <ion-input></ion-input>
+  </ion-item>      
+    
+  <ion-item>
+    <ion-label>必填项 <ion-text color="danger">*</ion-text></ion-label>
+    <ion-input required></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">floating Labelion</ion-label>
+    <ion-input ></ion-input>
+  </ion-item>  
+  <ion-item>
+    <ion-label position="fixed" >floating </ion-label>
+    <ion-input  placeholder="输入项" ></ion-input>
+  </ion-item>  
+  <ion-item>
+    <ion-label position="stacked">stacked Labelion</ion-label>
+    <ion-input  placeholder="输入项"></ion-input>
+  </ion-item>  
+
+  <ion-item>
+    <ion-input type="text" readonly color="success">关于button介绍</ion-input>  
+  </ion-item>
+
+  <ion-button>Default </ion-button>
+  <ion-button href="#">跳转href</ion-button>
+
+  <ion-button color="primary">Primary</ion-button>
+  <ion-button color="secondary">Secondary</ion-button>
+  <ion-button color="tertiary">Tertiary</ion-button>
+  <ion-button color="success">Success</ion-button>
+  <ion-button color="warning">Warning</ion-button>
+  <ion-button color="danger">Danger</ion-button>
+  <ion-button color="light">Light</ion-button>
+  <ion-button color="medium">Medium</ion-button>
+  <ion-button color="dark">Dark</ion-button>
+  
+  <ion-button expand="full">Full Button</ion-button>
+  <ion-button expand="block">Block Button</ion-button>
+  <ion-button shape="round">Round Button</ion-button>
+  <ion-button expand="full" fill="outline">Outline + Full</ion-button>
+  <ion-button expand="block" fill="outline">Outline + Block</ion-button>
+  <ion-button shape="round" fill="outline">Outline + Round</ion-button>
+  <ion-button>
+    <ion-icon slot="start" name="star"></ion-icon>
+    Left Icon
+  </ion-button>
+  
+  <ion-button>
+    Right Icon
+    <ion-icon slot="end" name="star"></ion-icon>
+  </ion-button>
+
+  <ion-badge color="primary">11</ion-badge>
+  <ion-badge color="secondary">22</ion-badge>
+  <ion-badge color="tertiary">33</ion-badge>
+  <ion-badge color="success">44</ion-badge>
+  <ion-badge color="warning">55</ion-badge>
+  <ion-badge color="danger">66</ion-badge>
+  <ion-badge color="light">77</ion-badge>
+  <ion-badge color="medium">88</ion-badge>
+  <ion-badge color="dark">99</ion-badge>
+  
+  <ion-button>
+    <ion-icon slot="icon-only" name="star"></ion-icon>
+  </ion-button>
+  <ion-button size="large">Large</ion-button>
+  <ion-button>
+    Default
+    <ion-badge color="primary">0</ion-badge>
+  </ion-button>
+  <ion-button size="small">Small</ion-button>
+    
+
+  <ion-item>
+    <ion-input type="text" readonly color="danger" >关于icon card 介绍</ion-input>  
+  </ion-item>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Card Title</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>ion-item in a card, icon left, button right</ion-label>
+      <ion-button fill="outline" slot="end">View</ion-button>
+    </ion-item>
+
+    <ion-card-content>
+      This is content, without any paragraph or header tags,
+      within an ion-card-content element.
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-item href="#" class="activated">
+      <ion-icon name="wifi" slot="start"></ion-icon>
+      <ion-label>Card Link Item 1 .activated</ion-label>
+    </ion-item>
+
+    <ion-item href="#">
+      <ion-icon name="wine" slot="start"></ion-icon>
+      <ion-label>Card Link Item 2</ion-label>
+    </ion-item>
+
+    <ion-item class="activated">
+      <ion-icon name="warning" slot="start"></ion-icon>
+      <ion-label>Card Button Item 1 .activated</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="walk" slot="start"></ion-icon>
+      <ion-label>Card Button Item 2</ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-item>
+    <ion-input type="text" readonly color="danger" >关于ion-checkbox介绍</ion-input>  
+  </ion-item>
+
+  <ion-checkbox> </ion-checkbox>
+  <ion-checkbox disabled="true"></ion-checkbox>
+  <ion-checkbox checked="true"></ion-checkbox>
+  <ion-checkbox color="primary"></ion-checkbox>
+  <ion-checkbox color="secondary"></ion-checkbox>
+  <ion-checkbox color="danger"></ion-checkbox>
+  <ion-checkbox color="light"></ion-checkbox>
+  <ion-checkbox color="dark"></ion-checkbox>
+  <ion-list>
+    <ion-item *ngFor="let entry of form">
+      <ion-label>{{entry.val}}</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="entry.isChecked" color="primary" ></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-input type="text" readonly color="danger" >关于 ion-chip 介绍</ion-input>  
+  </ion-item>
+
+  <ion-chip>
+      <ion-label>Default</ion-label>
+  </ion-chip>
+      
+  <ion-chip>
+    <ion-label color="secondary">Secondary Label</ion-label>
+  </ion-chip>
+
+  <ion-chip color="secondary">
+    <ion-label color="dark">Secondary w/ Dark label</ion-label>
+  </ion-chip>
+      
+  <ion-chip>
+    <ion-icon name="pin"></ion-icon>
+    <ion-label>Default</ion-label>
+  </ion-chip>
+      
+  <ion-chip>
+    <ion-icon name="heart" color="dark"></ion-icon>
+    <ion-label>Default</ion-label>
+  </ion-chip>
+      
+  <ion-chip>
+    <ion-label>Button Chip</ion-label>
+    <ion-icon name="close-circle"></ion-icon>
+  </ion-chip>
+      
+  <ion-chip>
+    <ion-icon name="pin" color="primary"></ion-icon>
+    <ion-label>Icon Chip</ion-label>
+    <ion-icon name="close"></ion-icon>
+  </ion-chip>
+      
+  <ion-chip>
+    <ion-avatar>
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+    <ion-label>Avatar Chip</ion-label>
+    <ion-icon name="close-circle"></ion-icon>
+  </ion-chip>
+
+  <ion-button expand="block" fill="outline" (click)='scrollToTop()'>返回到顶部</ion-button>
+  
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime display-format="MMM DD, YYYY HH:mm:ss" [(ngModel)]="timestr"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime display-format="MM/YYYY" picker-format="MMMM YYYY"></ion-datetime>
+  </ion-item>
+ 
+  <ion-item>
+    <ion-input type="text" readonly color="danger" >关于 ion-fab-button 介绍</ion-input>  
+  </ion-item>
+
+  <ion-fab>
+    <ion-fab-button>Button</ion-fab-button>
+  </ion-fab>
+  <ion-fab-button>Default</ion-fab-button>
+  <ion-fab-button size="small">Mini</ion-fab-button>
+  <ion-fab-button color="primary">Primary</ion-fab-button>
+  <ion-fab-button color="secondary">Secondary</ion-fab-button>
+  <ion-fab-button color="danger">Danger</ion-fab-button>
+  <ion-fab-button color="light">Light</ion-fab-button>
+  <ion-fab-button color="dark">Dark</ion-fab-button>
+
+  <ion-item>
+    <ion-input type="text" readonly color="danger" >关于 ion-fab-list 介绍</ion-input>  
+  </ion-item>
+  <ion-fab vertical="bottom" horizontal="end" class="bottom_btns">
+    <ion-fab-button>Share</ion-fab-button>
+  
+    <ion-fab-list side="top">
+      <ion-fab-button>Facebook</ion-fab-button>
+      <ion-fab-button>Twitter</ion-fab-button>
+      <ion-fab-button>Youtube</ion-fab-button>
+    </ion-fab-list>
+  
+    <ion-fab-list side="start">
+      <ion-fab-button>Vimeo</ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  
+  <ion-item>
+    <ion-input type="text" readonly color="danger" >关于 ion-中间set 介绍</ion-input>  
+  </ion-item>
+
+  <!-- <ion-fab vertical="top" horizontal="end" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  
+    
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="arrow-dropleft"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  
+    
+    <ion-fab vertical="top" horizontal="start" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="arrow-dropright"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+  
+    
+    <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="arrow-dropup"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  
+    
+    <ion-fab vertical="center" horizontal="start" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="share"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  
+    
+    <ion-fab vertical="center" horizontal="end" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  
+    
+    <ion-fab vertical="center" horizontal="end" edge slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="person"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  
+    
+    -->
+  <ion-fab vertical="center" horizontal="start" edge slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="settings"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="bottom">
+      <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+
+    </ion-fab-list>
+  </ion-fab>
+   
+  <div>
+    <ion-fab vertical="center" horizontal="center" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="share"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+      </ion-fab-list>
+      <ion-fab-list side="bottom">
+        <ion-fab-button><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+      </ion-fab-list>
+      <ion-fab-list side="start">
+        <ion-fab-button><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+      </ion-fab-list>
+      <ion-fab-list side="end">
+        <ion-fab-button><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>   
+  </div>
+    
+  <ion-item>
+    <ion-input type="text" readonly color="danger" >关于 ion-col 介绍</ion-input>  
+  </ion-item>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        ion-col
+      </ion-col>
+      <ion-col>
+        ion-col
+      </ion-col>
+      <ion-col>
+        ion-col
+      </ion-col>
+      <ion-col>
+        ion-col
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col size="6">
+        ion-col [size="6"]
+      </ion-col>
+      <ion-col>
+        ion-col
+      </ion-col>
+      <ion-col>
+        ion-col
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col size="3">
+        ion-col [size="3"]
+      </ion-col>
+      <ion-col>
+        ion-col
+      </ion-col>
+      <ion-col size="3">
+        ion-col [size="3"]
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col size="3">
+        ion-col [size="3"]
+      </ion-col>
+      <ion-col size="3" offset="3">
+        ion-col [size="3"] [offset="3"]
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col>
+        ion-col
+      </ion-col>
+      <ion-col>
+        ion-col
+        <br>#
+      </ion-col>
+      <ion-col>
+        ion-col
+        <br>#
+        <br>#
+      </ion-col>
+      <ion-col>
+        ion-col
+        <br>#
+        <br>#
+        <br>#
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col align-self-start>
+        ion-col [start]
+      </ion-col>
+      <ion-col align-self-center>
+        ion-col [center]
+      </ion-col>
+      <ion-col align-self-end>
+        ion-col [end]
+      </ion-col>
+      <ion-col>
+        ion-col
+        <br>#
+        <br>#
+      </ion-col>
+    </ion-row>
+  
+    <ion-row align-items-start>
+      <ion-col>
+        [start] ion-col
+      </ion-col>
+      <ion-col>
+        [start] ion-col
+      </ion-col>
+      <ion-col align-self-end>
+        [start] ion-col [end]
+      </ion-col>
+      <ion-col>
+        ion-col
+        <br>#
+        <br>#
+      </ion-col>
+    </ion-row>
+  
+    <ion-row align-items-center>
+      <ion-col>
+        [center] ion-col
+      </ion-col>
+      <ion-col>
+        [center] ion-col
+      </ion-col>
+      <ion-col>
+        [center] ion-col
+      </ion-col>
+      <ion-col>
+        ion-col
+        <br>#
+        <br>#
+      </ion-col>
+    </ion-row>
+  
+    <ion-row align-items-end>
+      <ion-col>
+        [end] ion-col
+      </ion-col>
+      <ion-col align-self-start>
+        [end] ion-col [start]
+      </ion-col>
+      <ion-col>
+        [end] ion-col
+      </ion-col>
+      <ion-col>
+        ion-col
+        <br>#
+        <br>#
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col size="12" size-sm>
+        ion-col [size="12"] [size-sm]
+      </ion-col>
+      <ion-col size="12" size-sm>
+        ion-col [size="12"] [size-sm]
+      </ion-col>
+      <ion-col size="12" size-sm>
+        ion-col [size="12"] [size-sm]
+      </ion-col>
+      <ion-col size="12" size-sm>
+        ion-col [size="12"] [size-sm]
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col size="12" size-md>
+        ion-col [size="12"] [size-md]
+      </ion-col>
+      <ion-col size="12" size-md>
+        ion-col [size="12"] [size-md]
+      </ion-col>
+      <ion-col size="12" size-md>
+        ion-col [size="12"] [size-md]
+      </ion-col>
+      <ion-col size="12" size-md>
+        ion-col [size="12"] [size-md]
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col size="6" size-lg offset="3">
+        ion-col [size="6"] [size-lg] [offset="3"]
+      </ion-col>
+      <ion-col size="3" size-lg>
+        ion-col [size="3"] [size-lg]
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    
+
+  <ion-item>
+    <ion-label>
+      Item
+    </ion-label>
+  </ion-item>
+  
+  
+  <ion-item (click)="buttonClick()">
+    <ion-label>
+      Button Item
+    </ion-label>
+  </ion-item>
+  
+  
+  <ion-item href="https://www.ionicframework.com">
+    <ion-label>
+      Anchor Item
+    </ion-label>
+  </ion-item>
+  
+  <ion-item color="secondary">
+    <ion-label>
+      Secondary Color Item
+    </ion-label>
+  </ion-item>
+
+
+  <ion-item color="danger">
+    <ion-label>
+        ion-item　箭头(Detail Arrows)
+    </ion-label>
+  </ion-item>
+
+  <ion-item detail>
+    <ion-label>
+      Standard Item with Detail Arrow
+    </ion-label>
+  </ion-item>
+  
+  <ion-item (click)="buttonClick()" detail>
+    <ion-label>
+      Button Item with Detail Arrow
+    </ion-label>
+  </ion-item>
+  
+  <ion-item detail="false" href="https://www.ionicframework.com">
+    <ion-label>
+      Anchor Item with no Detail Arrow
+    </ion-label>
+  </ion-item>
+
+  <ion-item color="danger">
+    <ion-label>
+        List Items
+    </ion-label>
+  </ion-item>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        Item
+      </ion-label>
+    </ion-item>
+  
+    <ion-item lines="none">
+      <ion-label>
+        No Lines Item
+      </ion-label>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label text-wrap>
+      Multiline text that should wrap when it is too long
+      to fit on one line in the item.
+      </ion-label>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label text-wrap>
+        <ion-text color="primary">
+          <h3>H3 Primary Title</h3>
+        </ion-text>
+        <p>Paragraph line 1</p>
+        <ion-text color="secondary">
+          <p>Paragraph line 2 secondary</p>
+        </ion-text>
+      </ion-label>
+    </ion-item>
+  
+    <ion-item lines="full">
+      <ion-label>
+        Item with Full Lines
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-item color="danger">
+    <ion-label>
+      Item Lines
+    </ion-label>
+  </ion-item>
+
+  <ion-item lines="inset">
+    <ion-label>Item Lines Inset</ion-label>
+  </ion-item>
+  
+  
+  <ion-item lines="full">
+    <ion-label>Item Lines Full</ion-label>
+  </ion-item>
+  
+  
+  <ion-item lines="none">
+    <ion-label>Item Lines None</ion-label>
+  </ion-item>
+      
+      
+  <ion-list lines="full">
+    <ion-item>
+      <ion-label>Full Lines Item 1</ion-label>
+    </ion-item>
+          
+    <ion-item>
+      <ion-label>Full Lines Item 2</ion-label>
+    </ion-item>
+    </ion-list>
+          
+          
+    <ion-list lines="inset">
+    <ion-item>
+      <ion-label>Inset Lines Item 1</ion-label>
+    </ion-item>
+          
+    <ion-item>
+      <ion-label>Inset Lines Item 2</ion-label>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list lines="none">
+    <ion-item>
+      <ion-label>No lines Item 1</ion-label>
+    </ion-item>
+          
+    <ion-item>
+      <ion-label>No lines Item 2</ion-label>
+    </ion-item>
+          
+    <ion-item>
+      <ion-label>No lines Item 3</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-item color="danger">
+    <ion-label>
+        Media Items
+      </ion-label>
+  </ion-item>
+
+  <ion-item (click)="testClick()">
+    <ion-avatar slot="start">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+    </ion-avatar>
+    <ion-label>
+      Avatar Start, Button Item
+    </ion-label>
+  </ion-item>
+          
+  <ion-item href="#">
+    <ion-label>
+      Thumbnail End, Anchor Item
+    </ion-label>
+    <ion-thumbnail slot="end">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+    </ion-thumbnail>
+  </ion-item>
+          
+  <ion-item>
+    <ion-thumbnail slot="start">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+    </ion-thumbnail>
+    <ion-label>
+      <h2>H2 Title Text</h2>
+      <p>Button on right</p>
+    </ion-label>
+    <ion-button fill="outline" slot="end">View</ion-button>
+  </ion-item>
+          
+  <ion-item (click)="testClick()">
+    <ion-thumbnail slot="start">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+    </ion-thumbnail>
+    <ion-label>
+      <h3>H3 Title Text</h3>
+      <p>Icon on right</p>
+    </ion-label>
+    <ion-icon name="close-circle" slot="end"></ion-icon>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" readonly color="danger" >关于 Buttons in Items 介绍</ion-input>  
+  </ion-item>
+  <ion-item>
+    <ion-button slot="start">
+      Start
+    </ion-button>
+    <ion-label>Button Start/End</ion-label>
+    <ion-button slot="end">
+      End
+    </ion-button>
+  </ion-item>
+  
+  <ion-item>
+    <ion-button slot="start">
+      Start Icon
+      <ion-icon name="home" slot="end"></ion-icon>
+    </ion-button>
+    <ion-label>Buttons with Icons</ion-label>
+    <ion-button slot="end">
+      <ion-icon name="star" slot="end"></ion-icon>
+      End Icon
+    </ion-button>
+  </ion-item>
+  
+  <ion-item>
+    <ion-button slot="start">
+      <ion-icon slot="icon-only" name="navigate"></ion-icon>
+    </ion-button>
+    <ion-label>Icon only Buttons</ion-label>
+    <ion-button slot="end">
+      <ion-icon slot="icon-only" name="star"></ion-icon>
+    </ion-button>
+  </ion-item>
+    
+  <ion-item>
+    <ion-input type="text" readonly color="danger" >关于 Icons in Items 介绍</ion-input>  
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      Icon End
+    </ion-label>
+    <ion-icon name="information-circle" slot="end"></ion-icon>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>
+      Large Icon End
+    </ion-label>
+    <ion-icon name="information-circle" size="large" slot="end"></ion-icon>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>
+      Small Icon End
+    </ion-label>
+    <ion-icon name="information-circle" size="small" slot="end"></ion-icon>
+  </ion-item>
+  
+  <ion-item>
+    <ion-icon name="star" slot="start"></ion-icon>
+    <ion-label>
+      Icon Start
+    </ion-label>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>
+      Two Icons End
+    </ion-label>
+    <ion-icon name="checkmark-circle" slot="end"></ion-icon>
+    <ion-icon name="shuffle" slot="end"></ion-icon>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-input type="text" readonly color="danger" >关于 Item Inputs 介绍</ion-input>  
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Datetime</ion-label>
+    <ion-datetime></ion-datetime>
+  </ion-item>
+  
+  <ion-item>
+    <!-- 弹框形式的选择框 -->
+    <ion-label position="floating">Select</ion-label>
+    <ion-select>
+      <ion-select-option value="">No Game Console</ion-select-option>
+      <ion-select-option value="nes">NES</ion-select-option>
+      <ion-select-option value="n64" selected>Nintendo64</ion-select-option>
+      <ion-select-option value="ps">PlayStation</ion-select-option>
+      <ion-select-option value="genesis">Sega Genesis</ion-select-option>
+      <ion-select-option value="saturn">Sega Saturn</ion-select-option>
+      <ion-select-option value="snes">SNES</ion-select-option>
+    </ion-select>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Toggle</ion-label>
+    <ion-toggle slot="end"></ion-toggle>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Floating Input</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Input (placeholder)</ion-label>
+    <ion-input placeholder="Placeholder"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Checkbox</ion-label>
+    <ion-checkbox slot="start"></ion-checkbox>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Range</ion-label>
+    <ion-range></ion-range>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-input type="text" readonly color="danger" >关于 ion-item-divider 介绍</ion-input>  
+  </ion-item>
+
+  <ion-item-divider>
+    <ion-label>
+      Basic Item Divider
+    </ion-label>
+  </ion-item-divider>
+  
+  <ion-item-divider color="secondary">
+    <ion-label>
+      Secondary Item Divider
+    </ion-label>
+  </ion-item-divider>
+  
+  
+  <ion-list>
+    <ion-item-divider>
+      <ion-label>
+        Section A
+      </ion-label>
+    </ion-item-divider>
+  
+    <ion-item><ion-label>A1</ion-label></ion-item>
+    <ion-item><ion-label>A2</ion-label></ion-item>
+    <ion-item><ion-label>A3</ion-label></ion-item>
+    <ion-item><ion-label>A4</ion-label></ion-item>
+    <ion-item><ion-label>A5</ion-label></ion-item>
+  
+    <ion-item-divider>
+      <ion-label>
+        Section B
+      </ion-label>
+    </ion-item-divider>
+  
+    <ion-item><ion-label>B1</ion-label></ion-item>
+    <ion-item><ion-label>B2</ion-label></ion-item>
+    <ion-item><ion-label>B3</ion-label></ion-item>
+    <ion-item><ion-label>B4</ion-label></ion-item>
+    <ion-item><ion-label>B5</ion-label></ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-input type="text" readonly color="danger" >关于   ion-item-group 介绍</ion-input>  
+  </ion-item>
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>a</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>Angola</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Argentina</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Armenia</ion-label>
+    </ion-item>
+  </ion-item-group>
+  
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>B</ion-label>
+    </ion-item-divider>
+  
+    <ion-item>
+      <ion-label>Bangladesh</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Belarus</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Belgium</ion-label>
+    </ion-item>
+  </ion-item-group>
+    
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>Fruits</ion-label>
+    </ion-item-divider>
+
+    <ion-item-sliding>
+      <ion-item>
+        <ion-label><h3>Grapes</h3></ion-label>
+      </ion-item>
+      <ion-item-options>
+        <ion-item-option>Favorite</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+      
+    <ion-item-sliding>
+      <ion-item>
+        <ion-label><h3>Apples</h3></ion-label>
+      </ion-item>
+      <ion-item-options>
+        <ion-item-option>Favorite</ion-item-option> 
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-item-group>
+
+ 
+  <ion-item>
+    <ion-input type="text" readonly color="danger" >关于 ion-item-sliding 介绍</ion-input>  
+  </ion-item>
+  <ion-list>
+    <ion-item-sliding>
+      <ion-item>
+        <ion-label>Item</ion-label>
+      </ion-item>
+      <ion-item-options side="start">
+        <ion-item-option (click)="favorite(item)">Favorite</ion-item-option>
+        <ion-item-option color="danger" (click)="share(item)">Share</ion-item-option>
+      </ion-item-options>
+  
+      <ion-item-options side="end">
+        <ion-item-option (click)="unread(item)">Unread</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-item>
+    <ion-input type="text" readonly color="danger" >关于 ion-lable 介绍</ion-input>  
+  </ion-item> 
+  <ion-label>Label</ion-label>
+  <ion-label color="primary">Primary Label</ion-label>
+  <ion-label color="secondary">Secondary Label</ion-label>
+  <ion-label color="danger">Danger Label</ion-label>
+  <ion-label color="light">Light Label</ion-label>
+  <ion-label color="dark">Dark Label</ion-label>
+
+  <ion-item>
+    <ion-label>Default Item</ion-label>
+  </ion-item>
+
+  <ion-item text-wrap>
+    <ion-label>
+      Multi-line text that should wrap when it is too long
+      to fit on one line in the item.
+    </ion-label>
+  </ion-item>
+    
+  <ion-item>
+    <ion-input type="text" readonly color="danger" >关于 ion-note 介绍</ion-input>  
+  </ion-item> 
+  <ion-note color="primary">Primary Note</ion-note>
+  <ion-note color="secondary">Secondary Note</ion-note>
+  <ion-note color="danger">Danger Note</ion-note>
+  <ion-note color="light">Light Note</ion-note>
+  <ion-note color="dark">Dark Note</ion-note>
+  
+  <ion-list>
+    <ion-list-header>
+      <ion-label>list-header</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Note (End)</ion-label>
+      <ion-note slot="end">On</ion-note>
+    </ion-item>
+  
+    <ion-item>
+      <ion-note slot="start">Off</ion-note>
+      <ion-label>Note (Start)</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-virtual-scroll [items]="form">
+    <ion-item *virtualItem="let item">
+      {{ item.val }}
+    </ion-item>
+  </ion-virtual-scroll>
+
+  <ion-item>
+    <ion-input type="text" readonly color="danger" >关于 媒体 Media 介绍</ion-input>  
+  </ion-item> 
+  <ion-avatar>
+    <img [src]="user.img">
+  </ion-avatar>
+  <ion-img [src]="user.img"></ion-img>
+  <ion-thumbnail>
+    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+  </ion-thumbnail>
+    
+  <ion-item>
+    <ion-thumbnail slot="start">
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-thumbnail>
+    <ion-label>Item Thumbnail</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" readonly color="danger" >关于 媒体 searchbar 介绍</ion-input>  
+  </ion-item> 
+  <ion-searchbar></ion-searchbar>
+  <ion-searchbar color="danger"></ion-searchbar>
+  <ion-searchbar value="Ionic"></ion-searchbar>
+  <ion-searchbar type="tel"></ion-searchbar>
+  <ion-searchbar showCancelButton cancelButtonText="Custom Cancel"></ion-searchbar>
+  <ion-searchbar debounce="500"></ion-searchbar>
+  <ion-searchbar animated></ion-searchbar>
+  <ion-searchbar placeholder="Filter Schedules"></ion-searchbar>
+  <ion-toolbar>
+    <ion-searchbar></ion-searchbar>
+  </ion-toolbar>
+  
+
+
+</ion-content>
