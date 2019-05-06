@@ -26,6 +26,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'message',
+        children: [
+          {
+            path: '',
+            loadChildren: '../message/message.module#MessagePageModule'
+          }
+        ]
+      },
+      {
         path: 'my',
         children: [
           {

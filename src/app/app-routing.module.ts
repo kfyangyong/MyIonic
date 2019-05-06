@@ -7,9 +7,13 @@ const routes: Routes = [
   { path: 'my', loadChildren: './my/my.module#MyPageModule' },
   { path: 'homedetial', loadChildren: './pages/homedetial/homedetial.module#HomedetialPageModule' },
   { path: 'mydetail', loadChildren: './pages/mydetail/mydetail.module#MydetailPageModule' },
-  { path: 'myabout', loadChildren: './pages/myabout/myabout.module#MyaboutPageModule' },
   { path: 'myset', loadChildren: './pages/myset/myset.module#MysetPageModule' },
-  { path: 'found', loadChildren: './found/found.module#FoundPageModule' }
+  { path: 'found', loadChildren: './found/found.module#FoundPageModule' },
+  { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
+  { path: 'myabout', loadChildren: './pages/myabout/myabout.module#MyaboutPageModule' },
+  { path: 'message', loadChildren: './message/message.module#MessagePageModule' },
+  { path: 'messagedetail', loadChildren: './pages/messagedetail/messagedetail.module#MessagedetailPageModule' },
+  { path: 'register', loadChildren: './pages/register/register.module#RegisterPageModule' },
 ];
 @NgModule({
   imports: [

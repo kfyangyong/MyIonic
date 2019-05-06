@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ViewChild } from '@angular/core';
-import { NavController,IonContent} from '@ionic/angular';
+import { NavController, IonContent, ToastController, AlertController, LoadingController } from '@ionic/angular';
 
 import { HomedetialPage } from '../pages/homedetial/homedetial.page'
 import { from } from 'rxjs';
@@ -43,7 +43,13 @@ export class HomePage implements OnInit {
 
   @ViewChild(IonContent) content:IonContent;
 
-  constructor() {
+  
+  constructor(
+    public navCtrl: NavController,
+    public toastCtrl: ToastController,
+    public alertCtrl: AlertController,
+    public loadingCtrl: LoadingController
+  ) { 
 
   }
 
@@ -104,5 +110,9 @@ export class HomePage implements OnInit {
     // NavController.router.push(homedetialPage)
   }
 
+  gonext() {
+
+    this.navCtrl.navigateForward('homedetial')
+  }
 
 }

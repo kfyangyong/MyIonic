@@ -1,14 +1,21 @@
-<app-header></app-header>
 
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="gonext()">
+        <ion-icon slot="icon-only" name="contact"></ion-icon>
+      </ion-button>    
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
- <!-- <ion-content
-  [scrollion-content　事件(Events)]="true"
-  (ionScrollStart)="logScrollStart()"
-  (ionScroll)="logScrolling($event)"
-  (ionScrollEnd)="logScrollEnd()">
-   ion-content> -->
 <ion-content (ionScrollStart)="logScrollStart()" (ionScroll)="logScrolling($event)" (ionScrollEnd)="logScrollEnd($event)">
   it's home
+
+  <ion-item (click)="gonext()">
+    <ion-input type="text" readonly color="danger">栅格化</ion-input>  
+  </ion-item>
 
   <ion-item>
     <ion-input type="text" readonly color="danger">关于input介绍</ion-input>  

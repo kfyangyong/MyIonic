@@ -1,9 +1,17 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>myset</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-item (click)="goToMyabout()" detail>
+    <ion-label>
+      设置
+    </ion-label>
+  </ion-item> 
 
 </ion-content>

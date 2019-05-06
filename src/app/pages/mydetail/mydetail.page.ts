@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController, ToastController, AlertController, LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-mydetail',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MydetailPage implements OnInit {
 
-  constructor() { }
-
+  constructor(
+    public navCtrl: NavController,
+    public toastCtrl: ToastController,
+    public alertCtrl: AlertController,
+    public loadingCtrl: LoadingController
+  ) { }
   ngOnInit() {
+  }
+
+  goToMy() {
+    
   }
 
 }

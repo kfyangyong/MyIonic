@@ -1,6 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
-
-import { NavParams } from '@ionic/angular';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-myabout',
@@ -9,9 +7,7 @@ import { NavParams } from '@ionic/angular';
 })
 export class MyaboutPage implements OnInit {
 
-  @Input() value: number;
-
-  constructor(navParams: NavParams) { }
+  constructor() { }
 
   ngOnInit() {
   }

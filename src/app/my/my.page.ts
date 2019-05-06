@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-
-import { ViewChild } from '@angular/core';
-import { IonInfiniteScroll } from '@ionic/angular';
-
-//MenuController
-import { MenuController } from '@ionic/angular';
-
+import { NavController, ToastController, AlertController, LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-my',
@@ -15,53 +9,30 @@ import { MenuController } from '@ionic/angular';
 })
 export class MyPage implements OnInit {
 
-  @ViewChild(IonInfiniteScroll) infiniteScroll: IonInfiniteScroll;
 
-  constructor(private menu: MenuController) { 
-   
+  constructor(
+    public navCtrl: NavController,
+    public toastCtrl: ToastController,
+    public alertCtrl: AlertController,
+    public loadingCtrl: LoadingController
+  ) { 
+
   }
-
-  public data:any[]=[]
 
   ngOnInit() {
-    for(let i=0; i<200; i++){
-      let str = "这是第"+i
-      this.data.push(str)
-    }
+    
   }
 
-
-
-  loadData(event) {
-    setTimeout(() => {
-      console.log('Done');
-      event.target.complete();
-
-      // App logic to determine if all data is loaded
-      // and disable the infinite scroll
-      if (this.data.length == 1000) {
-        event.target.disabled = true;
-      }
-    }, 500);
+  goToMyabout() {
+    this.navCtrl.navigateForward('mydetail');
   }
 
-  toggleInfiniteScroll() {
-    this.infiniteScroll.disabled = !this.infiniteScroll.disabled;
+  goToMyset() {
+    this.navCtrl.navigateForward('myset');
   }
 
-
-  //menu
-  openFirst() {
-    this.menu.enable(true, 'first');
-    this.menu.open('first');
+  loginIn() {
+    this.navCtrl.navigateForward('login');
   }
-
-  openEnd() {
-    this.menu.open('end');
-  }
-
-  openCustom() {
-    this.menu.enable(true, 'custom');
-    this.menu.open('custom');
-  }
+  
 }

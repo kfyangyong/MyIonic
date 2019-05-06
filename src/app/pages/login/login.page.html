@@ -1,0 +1,74 @@
+
+<ion-content padding class="animated fadeIn login auth-page"> 
+
+  <div class="theme-bg"></div>
+
+  <div class="auth-content">
+    <!-- logo -->
+    <img src="../../../assets/icon/favicon.png" alt="">
+  </div>
+
+  <!-- Login form -->
+  <form>
+    <ion-item>
+      <ion-label position='floating'>
+        <ion-icon name="mail" item-start></ion-icon>
+        账号
+      </ion-label>
+      <ion-input type="text">  </ion-input>
+
+    </ion-item>
+    <p ion-text padding class="tip-err" *ngIf="1">
+      <ion-text color="danger">
+        输入错误
+      </ion-text>
+    </p>
+
+    <ion-item>
+        <ion-label position='floating'>
+          <ion-icon name="lock" item-start></ion-icon>
+          密码
+        </ion-label>
+        <ion-input type="password">  </ion-input>
+    </ion-item>
+    <p ion-text padding class="tip-err" *ngIf="">
+      <ion-text color="danger">
+        密码错误
+      </ion-text>
+    </p>
+    <div>
+      <p text-right tappable (click)="forgotPass()" >
+        <ion-text color="primary">找回密码</ion-text>
+      </p>
+    </div>
+
+  </form>
+
+  <!-- <ion-row>
+      <ion-col>
+        <ion-radio color="primary" slot="start"></ion-radio>记住密码
+      </ion-col>
+      <ion-col>
+        <p text-right no-margin tappable (click)="forgotPass()" >
+          <ion-text color="primary">找回密码</ion-text>
+        </p>
+      </ion-col>
+    </ion-row> -->
+
+
+  <ion-button padding (click)="login()" routerDirection="" color="primary"  type="submit" expand="block" round strong> 登录 </ion-button>
+ 
+  <!-- Other links -->
+  <div text-center margin-top>
+    <span class="paz" tappable>
+      <ion-text color="primary" (click)="goToRegister()">还没有账号? <strong>去注册</strong></ion-text>
+    </span>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" (click)="goBack()">
+    <ion-fab-button color="medium" size="small">
+      <ion-icon name="close"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

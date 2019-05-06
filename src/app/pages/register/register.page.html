@@ -1,0 +1,28 @@
+
+
+<ion-content>
+
+  <!-- Login form -->
+  <form>
+    <ion-item>
+      <ion-label>账号: <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input clearInput required placeholder='请输入手机号'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>密码: <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input clearInput required placeholder="请设置密码"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>确认密码: <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input clearInput required placeholder="请再次输入密码"></ion-input>
+    </ion-item>
+  </form>
+
+  <ion-button padding (click)="login()" routerDirection="" color="primary"  type="submit" expand="block" round strong> 提交 </ion-button>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" (click)="goBack()">
+    <ion-fab-button color="medium" size="small">
+      <ion-icon name="close"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

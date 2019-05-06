@@ -5,6 +5,7 @@
 </ion-header>
 
 <ion-content>
+
   <ion-segment (ionChange)="segmentChanged($event)">
     <ion-segment-button value="friends">
       <ion-label>Friends</ion-label>
@@ -150,6 +151,7 @@
           <ion-icon slot="icon-only" name="search"></ion-icon>
         </ion-button>
       </ion-buttons>
+      
       <ion-buttons slot="primary">
         <ion-button color="secondary">
           <ion-icon slot="icon-only" name="more"></ion-icon>

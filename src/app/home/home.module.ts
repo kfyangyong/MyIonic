@@ -8,7 +8,6 @@ import { IonicModule } from '@ionic/angular';
 import { HomePage } from './home.page';
 
 import { ComponentsModule } from '../components/components.module'
-import { HeaderComponent } from '../components/header/header.component'
 
 import { from } from 'rxjs';
 const routes: Routes = [
@@ -27,8 +26,7 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [
-    HomePage,
-    HeaderComponent
+    HomePage
   ]
 })
 export class HomePageModule {
