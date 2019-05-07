@@ -16,6 +16,11 @@ export class RegisterPage implements OnInit {
   ) { }
 
   ngOnInit() {
+  
+  }
+
+  goRegister() {
+
   }
 
   goBack(){

@@ -5,7 +5,15 @@
 </ion-header>
 
 <ion-content>
+  <!-- 父子组件 传值 方法 -->
+  <app-share #share [message]="msg" [run]='run' > </app-share>
 
+  <ion-button (click)="getChildrenMsg()">
+    获取子组件数据
+  </ion-button>
+  <ion-button (click)="getChildrenRun()">
+      获取子组件方法
+    </ion-button>
   <ion-segment (ionChange)="segmentChanged($event)">
     <ion-segment-button value="friends">
       <ion-label>Friends</ion-label>

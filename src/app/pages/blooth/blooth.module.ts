@@ -4,15 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
-import { FoundPage } from './found.page';
 
-import { ShareComponent } from '../components/share/share.component'
-
+import { BloothPage } from './blooth.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: FoundPage
+    component: BloothPage
   }
 ];
 
@@ -23,9 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [
-    FoundPage,
-    ShareComponent
-  ]
+  declarations: [BloothPage]
 })
-export class FoundPageModule {}
+export class BloothPageModule {}

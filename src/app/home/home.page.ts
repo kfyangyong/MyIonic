@@ -115,4 +115,8 @@ export class HomePage implements OnInit {
     this.navCtrl.navigateForward('homedetial')
   }
 
+  goblooth() {
+    this.navCtrl.navigateForward('blooth')
+  }
+
 }

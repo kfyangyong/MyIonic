@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { ModalController } from '@ionic/angular';
 import { MyaboutPage } from '../pages/myabout/myabout.page';
@@ -15,13 +15,21 @@ import { ToastController } from '@ionic/angular';
 export class FoundPage implements OnInit {
 
 
+  public msg:any = '我是发现值msg'
+
+  //父组件获取子组件的 值 ，方法  @ViewChild
+  @ViewChild('share') share:any
   //模态框 modal
-  constructor(public modalController: ModalController,public toastController: ToastController) { 
+  constructor(
+    public modalController: ModalController,
+    public toastController: ToastController
+  ) { 
 
   }
 
   ngOnInit() {
     this.presentModal()
+
   }
 
   async presentModal() {
@@ -57,7 +65,6 @@ export class FoundPage implements OnInit {
   // ionSlideWillChange 	Emitted before the active slide has changed.
   ionSlideDidChange() {
     console.log('ionSlideDidChange');
-
   }
 
   //提示框
@@ -79,6 +86,20 @@ export class FoundPage implements OnInit {
       closeButtonText: 'Done'
     });
     toast.present();
+  }
+
+  //向子组件传递的方法
+  run() {
+    console.log("我是found run")
+  }
+
+  //父组件获取子组件的 值 ，方法
+  getChildrenMsg() {
+    console.log(this.share.shareStr)
+  }
+  getChildrenRun(){
+    console.log("getChildrenRun")
+    this.share.doChildrenRun()
   }
  
 

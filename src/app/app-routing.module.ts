@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'message', loadChildren: './message/message.module#MessagePageModule' },
   { path: 'messagedetail', loadChildren: './pages/messagedetail/messagedetail.module#MessagedetailPageModule' },
   { path: 'register', loadChildren: './pages/register/register.module#RegisterPageModule' },
+  { path: 'blooth', loadChildren: './pages/blooth/blooth.module#BloothPageModule' },
 ];
 @NgModule({
   imports: [
