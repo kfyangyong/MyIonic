@@ -12,24 +12,57 @@ import { BluetoothSerial } from '@ionic-native/bluetooth-serial/ngx';
 })
 export class BloothPage implements OnInit {
 
+  public bleState:Boolean = false
+  public bleList:any[] = []
+
   constructor(
-    private bluetoothSerial: BluetoothSerial,
-    public bluetoothle: BluetoothLE, 
+    private bleSerial: BluetoothSerial,
+    public ble: BluetoothLE, 
     public plt: Platform
   ) { 
-
-    this.plt.ready().then((readySource) => {
-      console.log('Platform ready from', readySource);
-      this.bluetoothle.initialize()
-
-      
-    });
-  
-
 
   }
 
   ngOnInit() {
+    this.bleIsOpen()
+    if(this.bleState){
+      this.initBle()
+    }
   }
+
+
+  bleIsOpen(){
+    this.bleSerial.isEnabled()
+    .then(date=>{
+      this.bleState = true;
+    }).catch(()=>{
+      this.bleState = true;
+    });
+  }
+
+  initBle() {
+    this.plt.ready().then((readySource) => {
+      console.log('Platform ready from', readySource);
+      //  this.ble.initialize()
+      console.log(this.ble.initialize())
+    });
+  }
+
+  startSearchBle() {
+    // this.ble.startScan()
+  }
+
+  stopSearchBle() {
+
+  }
+
+  goConnectBle(key) {
+
+  }
+
+  getBleData(){
+    
+  }
+
 
 }

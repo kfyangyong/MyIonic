@@ -8,11 +8,12 @@
         <ion-icon slot="icon-only" name="more"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>messagedetail</ion-title>
+    <ion-title>{{message.title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <p>我是消息详情</p>
-
+  <div padding >
+    <p no-margin>{{message.detail}}</p>
+  </div>
 </ion-content>
