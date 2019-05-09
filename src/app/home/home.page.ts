@@ -43,6 +43,7 @@ export class HomePage implements OnInit {
 
   @ViewChild(IonContent) content:IonContent;
 
+  @ViewChild('content') scrollcontent:any
   
   constructor(
     public navCtrl: NavController,
@@ -77,7 +78,15 @@ export class HomePage implements OnInit {
     console.log("logScrolling 被触发",e)
   }
   logScrollEnd(e) {
-    console.log("logScrollEnd 被触发",e)
+    // console.log("logScrollEnd 被触发",e)
+    console.log("logScrollEnd 被触发",e.scrollTop)
+    //返回顶部
+    // this.scrollcontent.scrollToTop()
+    //到底
+    // this.scrollcontent.scrollToBottom()
+    this.scrollcontent.getScrollElement().then((e)=>{
+      console.log("point",e.scrollTop)
+    })
   }
 
   scrollToTop() {

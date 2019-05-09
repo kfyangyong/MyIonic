@@ -5,16 +5,29 @@
 </ion-header>
 
 <ion-content>
+  
+    <ion-refresher slot="end" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          pullingText="下拉刷新"
+          refreshingSpinner="circles"
+          refreshingText="正在刷新...">
+      </ion-refresher-content>
+    </ion-refresher>
+  <ion-searchbar showCancelButton cancelButtonText="取消"></ion-searchbar>
 
   <ion-list>
-    <ion-card *ngFor="let item of messageList;let key=index" (click)="goToDetail(key)" >
+    <ion-list-header>
+      <ion-label>动态路由 get 传值</ion-label>
+    </ion-list-header>
+    <!-- 需要将路由路径添加参数 -->
+    <ion-card *ngFor="let item of messageList;let key=index" [routerLink]="['/messagedetail/','item']">
       <ion-card-header>
         <ion-card-title>{{item.title}}</ion-card-title>
       </ion-card-header>
       <ion-card-content>{{item.detail}}</ion-card-content>
     </ion-card>
   </ion-list>
-
   <ion-list>
     <ion-list-header>
       <ion-label>跳转路由 get 传值</ion-label>
@@ -26,5 +39,18 @@
       <ion-card-content>{{item.detail}}</ion-card-content>
     </ion-card>
   </ion-list>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>函数跳转</ion-label>
+    </ion-list-header>
+    <ion-card *ngFor="let item of messageList;let key=index" (click)="goToDetail(key)" >
+      <ion-card-header>
+        <ion-card-title>{{item.title}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>{{item.detail}}</ion-card-content>
+    </ion-card>
+  </ion-list>
+
+ 
 
 </ion-content>
